@@ -4,6 +4,8 @@
 #### Start 
 start docker daemon
 ```
+$ systemctl start docker
+or
 $ sudo systemctl start docker
 ```
 
