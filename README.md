@@ -1,6 +1,11 @@
 # podman_docker_cheatsheet
 
 
+####	To turn off requiring-sudo for docker: 
+```
+$ sudo usermod -a -G docker $USER
+```
+
 #### Start 
 start docker daemon
 ```
