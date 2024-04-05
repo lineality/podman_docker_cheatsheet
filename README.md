@@ -21,6 +21,13 @@ sudo docker build -t PROJECT_NAME .
 podman build -t PROJECT_NAME .
 ```
 
+#### Custom Docker File Alternate File
+```bash
+docker build -f /path/to/your/Dockerfile .
+```
+```bash
+podman build -f /path/to/your/Dockerfile .
+```
 #### Run
 run container
 - If your server is exposed at a given port, say 5000, and you want to test it at the same number, have both numbers be that same number -> 5000:5000
