@@ -23,10 +23,10 @@ podman build -t PROJECT_NAME .
 
 #### Custom Docker File Alternate File
 ```bash
-docker build -f /path/to/your/Dockerfile .
+sudo docker build -t PROJECT_NAME -f /path/to/your/Dockerfile .
 ```
 ```bash
-podman build -f /path/to/your/Dockerfile .
+podman build -t PROJECT_NAME -f /path/to/your/Dockerfile .
 ```
 #### Run
 run container
