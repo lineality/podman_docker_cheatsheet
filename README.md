@@ -41,10 +41,9 @@ podman run -p 5003:5000 PROJECT_NAME
 #### Run with Environment Variables
 ```bash 
 docker run -e DB_HOST=localhost -e DB_PORT=5432 -p 5003:5000 PROJECT_NAME
--e DB_HOST=localhost -e DB_PORT=5432
 ```
 ```bash
-docker run -e DB_HOST=localhost -e DB_PORT=5432 -p 5003:5000 PROJECT_NAME
+podman run -e DB_HOST=localhost -e DB_PORT=5432 -p 5003:5000 PROJECT_NAME
 ```
 
 #### Test
