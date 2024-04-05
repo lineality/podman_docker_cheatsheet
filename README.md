@@ -1,5 +1,5 @@
 # podman_docker_cheatsheet
-
+also see: https://github.com/lineality/clean_up_podman_docker_guide
 
 ####	To turn off requiring-sudo for docker: 
 ```bash
