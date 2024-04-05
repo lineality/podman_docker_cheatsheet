@@ -2,20 +2,22 @@
 
 
 ####	To turn off requiring-sudo for docker: 
-```
+```bash
 sudo usermod -a -G docker $USER
 ```
 
 #### Start 
 start docker daemon
-```
+```bash
 sudo systemctl start docker
 ```
 
 #### Build
 build image
-```
+```bash
 sudo docker build -t PROJECT_NAME .
+```
+```bash
 podman build -t PROJECT_NAME .
 ```
 
