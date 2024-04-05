@@ -25,7 +25,7 @@ podman build -t PROJECT_NAME .
 run container
 - If your server is exposed at a given port, say 5000, and you want to test it at the same number, have both numbers be that same number -> 5000:5000
 ```bash
-$ docker run -p 5003:5000 PROJECT_NAME
+$ sudo docker run -p 5003:5000 PROJECT_NAME
 ```
 ```bash
 $ podman run -p 5003:5000 PROJECT_NAME
