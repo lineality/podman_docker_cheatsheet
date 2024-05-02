@@ -14,6 +14,7 @@ CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/
 ```
 
 ###	To turn off requiring-sudo for docker: 
+This may be required for some applications such as azure cli.
 ```bash
 sudo usermod -a -G docker $USER
 ```
