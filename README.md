@@ -1,6 +1,18 @@
 # podman_docker_cheatsheet
 also see: https://github.com/lineality/clean_up_podman_docker_guide
 
+
+
+# docker stats:
+This does not log, but shows resource use in real time.
+```bash
+docker stats
+```
+Shows:
+```
+CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
+```
+
 ####	To turn off requiring-sudo for docker: 
 ```bash
 sudo usermod -a -G docker $USER
