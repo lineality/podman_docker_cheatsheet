@@ -50,6 +50,10 @@ docker run -p 5003:5000 PROJECT_NAME
 ```bash
 podman run -p 5003:5000 PROJECT_NAME
 ```
+Run in interactive mode:
+```bash
+podman run -it PROJECT_NAME
+```
 
 ### Run with Environment Variables
 ```bash 
