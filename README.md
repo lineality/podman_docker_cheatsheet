@@ -69,3 +69,36 @@ test server, port forward
 ```
 
 https://hub.docker.com/_/python/
+
+# Put .env into Docker Build
+```python
+import os
+import re
+
+def read_env_file(env_file):
+    env_vars = {}
+    with open(env_file, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                match = re.match(r'(\w+)\s*=\s*(.*)', line)
+                if match:
+                    key, value = match.groups()
+                    env_vars[key] = value
+    return env_vars
+
+def generate_docker_run_command(env_vars, project_name, port):
+    env_args = ' '.join([f'-e {key}={value}' for key, value in env_vars.items()])
+    port_mapping = f'-p {port}:{port}'
+    command = f'docker run {env_args} {port_mapping} {project_name}'
+    return command
+
+if __name__ == '__main__':
+    env_file = '.env'
+    project_name = 'PROJECT_NAME'
+    port = 5002
+
+    env_vars = read_env_file(env_file)
+    docker_run_command = generate_docker_run_command(env_vars, project_name, port)
+    print(docker_run_command)
+```
