@@ -63,9 +63,27 @@ docker run -e DB_HOST=localhost -e DB_PORT=5432 -p 5003:5000 PROJECT_NAME
 podman run -e DB_HOST=localhost -e DB_PORT=5432 -p 5003:5000 PROJECT_NAME
 ```
 
-### Test
-test server, port forward
+### Look at Resources, Memory
+Step 1 of 2: Get all containers ID
+```bash
+podman ps
+docker ps
 ```
+Output looks like:
+```
+CONTAINER ID  IMAGE                COMMAND            CREATED         STATUS         PORTS       NAMES
+987654321012  localhost/p2:latest  gunicorn main:app  2 minutes ago  Up 10 minutes  5001/tcp    stringofcharacters
+```
+
+Step 2 of 2: look at memory use
+```bash
+podman stats 987654321012
+docker stats 987654321012
+```
+Output looks like:
+```
+ID            NAME                    CPU %       MEM USAGE / LIMIT  MEM %       NET IO             BLOCK IO      PIDS        CPU TIME    AVG CPU %
+987654321012  stringofcharacters      0.08%       500.6MB / 10.00GB  5.00%       22.35MB / 112.2kB  0B / 8.917MB  18          4.179897s   0.58%
 ```
 
 https://hub.docker.com/_/python/
